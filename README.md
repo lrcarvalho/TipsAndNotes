@@ -11,3 +11,7 @@ Simple list with tips and notes related to development articles.
 ## Online Editors
  - Images: https://pixlr.com
  - Charts: https://www.draw.io/
+
+## PHP security scanner 
+ - Visual Code Grapp: https://sourceforge.net/projects/visualcodegrepp/
+ 	- Very useful tool to a simple security scan, with reports and graphs
