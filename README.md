@@ -15,3 +15,6 @@ Simple list with tips and notes related to development articles.
 ## PHP security scanner 
  - Visual Code Grapp: https://sourceforge.net/projects/visualcodegrepp/
  	- Very useful tool to a simple security static code scan, with reports and graphs
+
+## SSH Hosts
+ - Adding ssh alias: http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
