@@ -18,6 +18,3 @@ Simple list with tips and notes related to development articles.
 
 ## SSH Hosts
  - Adding ssh alias: http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
-
-## To read
- - DI: https://www.treinaweb.com.br/blog/entendendo-injecao-de-dependencia/ 
