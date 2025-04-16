@@ -15,17 +15,17 @@ on:
       site-amplify:
         description: 'Deploy Amplify site'
         required: false
-        default: true
+        default: false
         type: boolean
       site-fsig:
         description: 'Deploy FSIG site'
         required: false
-        default: true
+        default: false
         type: boolean
       site-germany:
         description: 'Deploy Germany site'
         required: false
-        default: true
+        default: false
         type: boolean
       site-india:
         description: 'Deploy India site'
@@ -35,7 +35,7 @@ on:
       site-receivership:
         description: 'Deploy Receivership site'
         required: false
-        default: true
+        default: false
         type: boolean  
       run_cr:
         description: 'Run Drush CR (Cache Rebuild)'
@@ -55,7 +55,7 @@ jobs:
         run: |
           echo "Branch: ${{ inputs.branch }}"
           echo "Deploy main site?: ${{ inputs.site-default }}"
-          echo "Deploy Amplify site?: ${{ inputs.amplify }}"
+          echo "Deploy Amplify site?: ${{ inputs.site-amplify }}"
           echo "Deploy Fsig site?: ${{ inputs.site-fsig }}"
           echo "Deploy Germany site?: ${{ inputs.site-germany }}"
           echo "Deploy India site?: ${{ inputs.site-india }}"
