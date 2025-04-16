@@ -1,0 +1,29 @@
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        default: 'dev'
+        required: true
+      sites:
+        description: 'Select one or more sites to deploy'
+        required: true
+        type: choice
+        options:
+          - default
+          - amplify
+          - fsig
+          - germany
+          - india
+          - receivership
+        default: default
+      run_cr:
+        description: 'Run Drush CR (Cache Rebuild)'
+        required: false
+        default: true
+        type: boolean
+      run_updb:
+        description: 'Run Drush UPDB (Update Database)'
+        required: false
+        default: false
+        type: boolean
