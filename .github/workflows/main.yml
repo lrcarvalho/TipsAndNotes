@@ -7,18 +7,36 @@ on:
         description: 'Branch to deploy'
         default: 'dev'
         required: true
-      sites:
-        description: 'Select one or more sites to deploy'
-        required: true
-        type: choice
-        options:
-          - default
-          - amplify
-          - fsig
-          - germany
-          - india
-          - receivership
-        default: default
+      site-default:
+        description: 'Deploy main site'
+        required: false
+        default: true
+        type: boolean
+      site-amplify:
+        description: 'Deploy Amplify site'
+        required: false
+        default: true
+        type: boolean
+      site-fsig:
+        description: 'Deploy FSIG site'
+        required: false
+        default: true
+        type: boolean
+      site-germany:
+        description: 'Deploy Germany site'
+        required: false
+        default: true
+        type: boolean
+      site-india:
+        description: 'Deploy India site'
+        required: false
+        default: true
+        type: boolean
+      site-receivership:
+        description: 'Deploy Receivership site'
+        required: false
+        default: true
+        type: boolean  
       run_cr:
         description: 'Run Drush CR (Cache Rebuild)'
         required: false
@@ -35,8 +53,15 @@ jobs:
     steps:
       - name: Show selected sites
         run: |
-          echo "Selected sites: ${{ inputs.sites }}"
-          IFS=',' read -ra SITE_LIST <<< "${{ inputs.sites }}"
-          for site in "${SITE_LIST[@]}"; do
-            echo "Processing site: $site"
-          done
+          echo "Branch: ${{ inputs.branch }}"
+          echo "Deploy main site?: ${{ inputs.site-default }}"
+          echo "Deploy Amplify site?: ${{ inputs.amplify }}"
+          echo "Deploy Fsig site?: ${{ inputs.site-fsig }}"
+          echo "Deploy Germany site?: ${{ inputs.site-germany }}"
+          echo "Deploy India site?: ${{ inputs.site-india }}"
+          echo "Deploy Receivership0 site?: ${{ inputs.site-receivership }}"
+          echo "Run CR?: ${{ inputs.run_cr }}"
+          echo "Run UPDB?: ${{ inputs.run_updb }}"
+          
+          
+          
