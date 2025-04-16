@@ -1,3 +1,5 @@
+name: Single environment Acquia deploy
+
 on:
   workflow_dispatch:
     inputs:
@@ -27,3 +29,14 @@ on:
         required: false
         default: false
         type: boolean
+jobs:
+  run-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show selected sites
+        run: |
+          echo "Selected sites: ${{ inputs.sites }}"
+          IFS=',' read -ra SITE_LIST <<< "${{ inputs.sites }}"
+          for site in "${SITE_LIST[@]}"; do
+            echo "Processing site: $site"
+          done
