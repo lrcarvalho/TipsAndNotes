@@ -3,9 +3,25 @@ name: Single environment Acquia deploy
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Branch to deploy'
-        default: 'dev'
+      aquia-env:
+        type: choice
+        description: 'Environment to deploy'
+        options: 
+        - dev
+        - dev2
+        - dev3
+        - dev4
+        - dev5
+        - dev6
+        - dev7
+        - dev8
+        - QA
+        - STAGE
+        - RQA
+        - RDEV
+        - RUAT
+        - RA
+        - PROD
         required: true
       site-default:
         description: 'Deploy main site'
