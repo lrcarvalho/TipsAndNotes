@@ -3,7 +3,7 @@ name: Single environment Acquia deploy
 on:
   workflow_dispatch:
     inputs:
-      aquia-env:
+      acquia-env:
         type: choice
         description: 'Environment to deploy'
         options: 
