@@ -70,6 +70,7 @@ jobs:
       - name: Show selected sites
         run: |
           echo "Branch: ${{ inputs.branch }}"
+          echo "Acquia env to deploy: ${{ inputs.acquia-env }}"
           echo "Deploy main site?: ${{ inputs.site-default }}"
           echo "Deploy Amplify site?: ${{ inputs.site-amplify }}"
           echo "Deploy Fsig site?: ${{ inputs.site-fsig }}"
